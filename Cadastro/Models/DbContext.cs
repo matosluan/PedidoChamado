@@ -7,6 +7,6 @@ namespace Cadastro.Models
         public Context(DbContextOptions<Context> opcoes) : base(opcoes)
         {
         }
-        public DbSet<DbCadastro> Cadastro { get; set; }
+        public DbSet<DbCadastro> cadastro { get; set; }
     }
 }

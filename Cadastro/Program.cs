@@ -8,7 +8,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddEntityFrameworkNpgsql().AddDbContext<Context>
     (options =>
     options.UseNpgsql
-    ("server=localhost;Port=5432;user id=postgres; password=univel;database=Cadastro True"));
+    ("server=localhost;Port=5432;user id=postgres; password=univel;database=Cadastro"));
 
 
 var app = builder.Build();
@@ -27,6 +27,8 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 app.MapControllerRoute(
     name: "default",

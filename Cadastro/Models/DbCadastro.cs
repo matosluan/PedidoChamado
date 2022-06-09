@@ -3,14 +3,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Cadastro.Models
 {
-    [Table("Cadastro", Schema = "public")]
+    [Table("cadastro", Schema = "public")]
     public class DbCadastro
     {
         [Key]
         public int id { get; set; }
         public string nome { get; set; }
         public string email { get; set; }
-        public DateOnly datanascimento {get; set;}
+        public DateTime datanascimento {get; set;}
         public char sexo { get; set; }
         public string rua { get; set; }
         public int numero { get; set; }
